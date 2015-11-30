@@ -26,7 +26,7 @@ class Backoffice extends CI_Controller
 
 
     /******************************************************************************
-     * funcion validar usuario
+     * funcion validar usuarios
      *****************************************************************************/
     public function validate_user(){
 

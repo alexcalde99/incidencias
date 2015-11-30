@@ -35,7 +35,7 @@ class Backoffice extends CI_Controller
 
         $this->load->model('users_model');
         if($this->users_model->validate_user($user, $password)){
-            $this->crud_usuarios();
+            $this->load->view('vista-backoffice');
         }else {
             $this->index();
         }

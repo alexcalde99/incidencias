@@ -18,8 +18,7 @@ class Backoffice extends CI_Controller
         date_default_timezone_set('Europe/Madrid');
     }
 
-    public function index()
-    {
+    public function index(){
 
         $this->load->view('login.php');
     }
@@ -99,5 +98,15 @@ class Backoffice extends CI_Controller
 
 
     }
+
+
+    /******************************************************************************
+     * funcion logout
+     *****************************************************************************/
+
+    function logout(){
+
+    }
+
 
 }

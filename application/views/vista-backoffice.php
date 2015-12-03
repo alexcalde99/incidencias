@@ -44,13 +44,16 @@ a:hover
 		<a href='<?php echo site_url('backoffice/')?>'>Roles</a> |
 		<a href='<?php echo site_url('backoffice/')?>'>Tipo de Incidencias</a> |
 		<a href='<?php echo site_url('backoffice/')?>'>Historico de Incidencias</a> |
+		<a href='<?php echo site_url('backoffice/')?>'>Salir</a> |
 
 
 		
 	</div>
 	<div style='height:20px;'></div>  
     <div>
-		<?php echo $output; ?>
+		<?php if(isset($output)){
+			echo $output;
+		}; ?>
     </div>
 </body>
 </html>

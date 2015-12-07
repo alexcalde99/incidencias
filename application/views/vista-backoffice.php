@@ -45,17 +45,17 @@ a:hover
 
 
 <div>
-	<img src="../../mantenimiento.png">
+	<h3>Mantiemiento Incidencias</h3>
 </div>
 	<div>
 		<a href='<?php echo site_url('backoffice/crud_usuarios')?>'>Usuarios</a> |
 		<a href='<?php echo site_url('backoffice/crud_incidencias')?>'>Incidencias</a> |
-		<a href='<?php echo site_url('backoffice/')?>'>Roles</a> |
-		<a href='<?php echo site_url('backoffice/')?>'>Tipo de Incidencias</a> |
-		<a href='<?php echo site_url('backoffice/')?>'>Historico de Incidencias</a> |
+		<a href='<?php echo site_url('backoffice/crud_roles')?>'>Roles</a> |
+		<a href='<?php echo site_url('backoffice/crud_tipo_incidencias')?>'>Tipo de Incidencias</a> |
+		<a href='<?php echo site_url('backoffice/historico_incidencias')?>'>Historico de Incidencias</a> |
 
 
-		<a href='<?php echo site_url('backoffice/')?>'><img src="../../Boton-Salir.png"></a> |
+		<a href='<?php echo site_url('backoffice/')?>'>SALIR</a> |
 
 
 		

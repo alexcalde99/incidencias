@@ -20,31 +20,42 @@ foreach($css_files as $file): ?>
 	<script src="<?php echo $file; ?>"></script>
 <?php endforeach; ?>
 <style type='text/css'>
-body
-{
+body{
 	font-family: Arial;
 	font-size: 14px;
 }
 a {
-    color: blue;
+    color: darkblue;
     text-decoration: none;
     font-size: 14px;
 }
 a:hover
 {
+	background-color: #0e90d2;
+	color: white;
 	text-decoration: underline;
 }
+	.table{
+		border: 5px solid blue;
+	}
+
 </style>
 </head>
 <body>
-<?php echo "<h3>Bienvenido al mantenimiento de incidencias</h3>"; ?>
+
+
+<div>
+	<img src="../../mantenimiento.png">
+</div>
 	<div>
 		<a href='<?php echo site_url('backoffice/crud_usuarios')?>'>Usuarios</a> |
 		<a href='<?php echo site_url('backoffice/crud_incidencias')?>'>Incidencias</a> |
 		<a href='<?php echo site_url('backoffice/')?>'>Roles</a> |
 		<a href='<?php echo site_url('backoffice/')?>'>Tipo de Incidencias</a> |
 		<a href='<?php echo site_url('backoffice/')?>'>Historico de Incidencias</a> |
-		<a href='<?php echo site_url('backoffice/')?>'>Salir</a> |
+
+
+		<a href='<?php echo site_url('backoffice/')?>'><img src="../../Boton-Salir.png"></a> |
 
 
 		

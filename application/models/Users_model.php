@@ -32,35 +32,40 @@ class Users_model extends CI_Model {
     }
 
 
-
     /******************************************************************************
      * funcion ENCRIPTAR usuario
+     * Le pasamos un pass y nos devuelve un pass encriptado
      *****************************************************************************/
 public function encriptar_usuario($password){
 
-    return $this->encryptation->encrypt($password);
-
+    $passwordEncriptado = $this->encrypt->encode($password);
+    return $passwordEncriptado;
 }
 
-
-
-
-
-
-
-
-
-    public function getAllUsers() {
-        $sql = "SELECT * FROM cg_users ORDER BY user_name";
-
-        $query = $this->db->query($sql);
-        if ($query->num_rows() > 0) {
-        
-            return $query->result();
-               
-        }
+    /******************************************************************************
+     * funcion DESENCRIPTAR usuario
+     *  Le pasamos un pass encriptado y nos devuelve un pass
+     *****************************************************************************/
+    function desencriptar_usuario($password){
+        $passwordDesncriptado = $this->encrypt->encode($password);
+        return $passwordDesncriptado;
     }
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //////////////////////////////////////////////////////////
+    //
+    /////////////////////////////////////////////////////////
     public function isValidUser($user,$password) {
         $sql="SELECT  * FROM usuarios WHERE email = ? AND clave = ? ";
         $query = $this->db->query($sql, array($user,$password));
@@ -88,4 +93,3 @@ public function encriptar_usuario($password){
 
 }
 
-?>

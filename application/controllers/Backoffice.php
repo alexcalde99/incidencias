@@ -140,17 +140,6 @@ class Backoffice extends CI_Controller
 
     }
 
-    /******************************************************************************
-     * funcion ENCRIPTAR PASSWORD
-     *****************************************************************************/
-
-    function encrypt_password_callback($post_array) {
-        $this->load->library('encrypt');
-
-        $post_array['clave'] = $this->encrypt->encode($post_array['clave']);
-
-        return $post_array;
-    }
 
 
 

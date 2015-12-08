@@ -56,8 +56,8 @@
                 <li class="active"><a href='<?php echo site_url('backoffice/crud_usuarios')?>'><span>USUARIOS</span> </a> </li>
                 <li><a href='<?php echo site_url('backoffice/crud_incidencias')?>'></i><span>INCIDENCIAS</span> </a> </li>
                 <li><a href='<?php echo site_url('backoffice/crud_roles')?>'></i><span>ROLES</span> </a></li>
-                <li><a href='<?php echo site_url('backoffice/crud_tipo_incidencias')?>'></i><span>TIOPO DE INCIDENCIAS</span> </a> </li>
-                <li><a href='<?php echo site_url('backoffice/crud_historico_incidencias')?>'><span>HISTORICO DE INCIDENCIAS</span> </> </li>
+                <li><a href='<?php echo site_url('backoffice/crud_tipo_incidencias')?>'></i><span>TIPO DE INCIDENCIAS</span> </a> </li>
+                <li><a href='<?php echo site_url('backoffice/crud_historico_incidencias')?>'></i><span>HISTORICO INCIDENCIAS</span> </a> </li>
 
             </ul>
         </div>

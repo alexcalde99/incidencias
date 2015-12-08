@@ -32,11 +32,14 @@ class Backoffice extends CI_Controller
         $user = $this->input->post('username');
         $password = $this->input->post('password');
 
+        //cargamos el modelo users
         $this->load->model('users_model');
+        //llamamos a la funcion validate_user que esta en user_model.....si es correcto nos envia al home
         if($this->users_model->validate_user($user, $password)){
             $this->load->view('home');
         }else {
-            $this->index();
+
+            $this->load->view('login');
         }
 
     }
@@ -53,7 +56,7 @@ class Backoffice extends CI_Controller
         //Seleccionar la tabla usuarios
         $crud->set_table('usuarios');
         //objetener la info de la tabla en un array, para despues mostrar
-        $crud->callback_before_insert(array($this,'encrypt_password_callback'));
+        //$crud->callback_before_insert(array($this,'encrypt_password_callback'));
         $output = $crud->render();
 
 
@@ -62,6 +65,7 @@ class Backoffice extends CI_Controller
 
 
     }
+
 
     /******************************************************************************
      * funcion CRUD incidencias
@@ -117,7 +121,7 @@ class Backoffice extends CI_Controller
 
     }
 
-    /******************************************************************************
+    /*/******************************************************************************
      * funcion CRUD HISTORICO INCIDENCIAS
      *****************************************************************************/
 
@@ -139,6 +143,7 @@ class Backoffice extends CI_Controller
         $this->load->view('home', $output);
 
     }
+
 
 
 

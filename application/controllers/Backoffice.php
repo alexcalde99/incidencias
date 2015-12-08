@@ -34,7 +34,7 @@ class Backoffice extends CI_Controller
 
         $this->load->model('users_model');
         if($this->users_model->validate_user($user, $password)){
-            $this->load->view('vista-backoffice');
+            $this->load->view('home');
         }else {
             $this->index();
         }
@@ -58,7 +58,7 @@ class Backoffice extends CI_Controller
 
 
         //a la vista-backofffice le paso el output(array)
-        $this->load->view('vista-backoffice', $output);
+        $this->load->view('home', $output);
 
 
     }
@@ -77,7 +77,7 @@ class Backoffice extends CI_Controller
         $output = $crud->render();
 
         //a la vista-backofffice le paso el output(array)
-        $this->load->view('vista-backoffice', $output);
+        $this->load->view('home', $output);
 
 
     }
@@ -95,7 +95,8 @@ class Backoffice extends CI_Controller
         $output = $crud->render();
 
         //a la vista-backoffice le pasamos el output(array)
-        $this->load->view('vista-backoffice', $output);
+        $this->load->view('home', $output);
+
 
     }
 
@@ -112,7 +113,7 @@ class Backoffice extends CI_Controller
         $output = $crud->render();
 
         //a la vista-backoffice le pasamos el output(array)
-        $this->load->view('vista-backoffice', $output);
+        $this->load->view('home', $output);
 
     }
 
@@ -135,7 +136,7 @@ class Backoffice extends CI_Controller
         $output=$crud->render();
 
         //a la vista-backoffice le pasamos el output(array)
-        $this->load->view('vista-backoffice', $output);
+        $this->load->view('home', $output);
 
     }
 

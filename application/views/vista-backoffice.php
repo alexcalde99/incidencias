@@ -52,7 +52,7 @@ a:hover
 		<a href='<?php echo site_url('backoffice/crud_incidencias')?>'>Incidencias</a> |
 		<a href='<?php echo site_url('backoffice/crud_roles')?>'>Roles</a> |
 		<a href='<?php echo site_url('backoffice/crud_tipo_incidencias')?>'>Tipo de Incidencias</a> |
-		<a href='<?php echo site_url('backoffice/historico_incidencias')?>'>Historico de Incidencias</a> |
+		<a href='<?php echo site_url('backoffice/crud_historico_incidencias')?>'>Historico de Incidencias</a> |
 
 
 		<a href='<?php echo site_url('backoffice/')?>'>SALIR</a> |

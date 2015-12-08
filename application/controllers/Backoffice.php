@@ -116,6 +116,28 @@ class Backoffice extends CI_Controller
 
     }
 
+    /******************************************************************************
+     * funcion CRUD HISTORICO INCIDENCIAS
+     *****************************************************************************/
+
+    function crud_historico_incidencias(){
+        //creamos objeto crud
+        $crud = new grocery_CRUD();
+        //selecionamos la tabla incidencias
+        $crud->set_table('incidencias');
+        //para quitar las opcinesd e editar
+        $crud->unset_edit();
+        //quitar las opciones de añadir
+        $crud->unset_add();
+        //quitar las opciones de borrar
+        $crud->unset_delete();
+        $crud->like("estado", "CERRADA");
+        $output=$crud->render();
+
+        //a la vista-backoffice le pasamos el output(array)
+        $this->load->view('vista-backoffice', $output);
+
+    }
 
     /******************************************************************************
      * funcion ENCRIPTAR PASSWORD
